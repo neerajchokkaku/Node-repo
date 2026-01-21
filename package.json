@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-ci-demo",
+  "version": "1.0.0",
+  "description": "Node.js app for CI pipeline demo",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
