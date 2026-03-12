@@ -1,12 +1,24 @@
 {
   "name": "nodejs-ci-demo",
   "version": "1.0.0",
-  "description": "Node.js app for CI pipeline demo",
-  "main": "src/app.js",
+  "description": "Node API with testing for CI security scanning",
+  "main": "src/server.js",
   "scripts": {
-    "test": "jest"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint src/",
+    "test": "jest --ci",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-junit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
-    "jest": "^29.0.0"
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "nodemon": "^3.0.3",
+    "supertest": "^6.3.3"
   }
 }
